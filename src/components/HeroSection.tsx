@@ -3,6 +3,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-tuuli-navy via-tuuli-navy/90 to-tuuli-green/20 relative overflow-hidden">
       {/* Background Pattern */}
@@ -27,6 +34,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-tuuli-green hover:bg-tuuli-green/90 text-white px-8 py-4 text-lg font-semibold group"
+              onClick={() => scrollToSection('contact')}
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -35,6 +43,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-tuuli-navy px-8 py-4 text-lg font-semibold"
+              onClick={() => scrollToSection('services')}
             >
               View Our Services
             </Button>

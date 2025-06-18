@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Twitter, Linkedin, Facebook, Github, Instagram } from 'lucide-react';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -42,6 +43,34 @@ const TeamSection = () => {
     }
   ];
 
+  const socialLinks = [
+    { 
+      icon: Twitter, 
+      url: "https://x.com/TuuliIncorpora1?t=NWV9sbjDV-fqFGFUDcr63w&s=35",
+      color: "text-blue-400 hover:text-blue-500"
+    },
+    { 
+      icon: Linkedin, 
+      url: "https://www.linkedin.com/company/92875843/admin/dashboard/",
+      color: "text-blue-700 hover:text-blue-800"
+    },
+    { 
+      icon: Facebook, 
+      url: "https://web.facebook.com/profile.php?id=100091131316887&mibextid=rS40aB7S9Ucbxw6v&_rdc=1&_rdr",
+      color: "text-blue-600 hover:text-blue-700"
+    },
+    { 
+      icon: Github, 
+      url: "#",
+      color: "text-gray-800 hover:text-gray-900"
+    },
+    { 
+      icon: Instagram, 
+      url: "https://www.instagram.com/tuuli.inc/",
+      color: "text-pink-600 hover:text-pink-700"
+    }
+  ];
+
   return (
     <section id="team" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -72,7 +101,22 @@ const TeamSection = () => {
                   {member.name}
                 </h3>
                 <p className="text-tuuli-green font-semibold mb-4">{member.role}</p>
-                <p className="text-gray-600 leading-relaxed">{member.description}</p>
+                <p className="text-gray-600 leading-relaxed mb-6">{member.description}</p>
+                
+                {/* Social Media Icons */}
+                <div className="flex justify-center space-x-3">
+                  {socialLinks.map((social, socialIndex) => (
+                    <a
+                      key={socialIndex}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200 ${social.color}`}
+                    >
+                      <social.icon className="h-4 w-4" />
+                    </a>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}

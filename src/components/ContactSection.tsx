@@ -70,21 +70,37 @@ const ContactSection = () => {
                 <h3 className="text-2xl font-bold text-tuuli-navy mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-tuuli-green/10 p-3 rounded-full">
+                    <a 
+                      href="mailto:tuuli.inc@gmail.com"
+                      className="bg-tuuli-green/10 p-3 rounded-full hover:bg-tuuli-green/20 transition-colors duration-200 cursor-pointer"
+                    >
                       <Mail className="h-6 w-6 text-tuuli-green" />
-                    </div>
+                    </a>
                     <div>
                       <p className="font-semibold text-tuuli-navy">Email</p>
-                      <p className="text-gray-600">tuuli.inc@gmail.com</p>
+                      <a 
+                        href="mailto:tuuli.inc@gmail.com" 
+                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                      >
+                        tuuli.inc@gmail.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-tuuli-green/10 p-3 rounded-full">
+                    <a 
+                      href="tel:+233558779247"
+                      className="bg-tuuli-green/10 p-3 rounded-full hover:bg-tuuli-green/20 transition-colors duration-200 cursor-pointer"
+                    >
                       <Phone className="h-6 w-6 text-tuuli-green" />
-                    </div>
+                    </a>
                     <div>
                       <p className="font-semibold text-tuuli-navy">Phone</p>
-                      <p className="text-gray-600">+233 55 877 9247</p>
+                      <a 
+                        href="tel:+233558779247" 
+                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                      >
+                        +233 55 877 9247
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -97,12 +113,24 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-tuuli-green/10 p-3 rounded-full">
+                    <a 
+                      href="https://www.google.com/maps/place/Accra,+Ghana/@5.6037168,-0.1869644,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644!16zL20vMGZuMmg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-tuuli-green/10 p-3 rounded-full hover:bg-tuuli-green/20 transition-colors duration-200 cursor-pointer"
+                    >
                       <MapPin className="h-6 w-6 text-tuuli-green" />
-                    </div>
+                    </a>
                     <div>
                       <p className="font-semibold text-tuuli-navy">Location</p>
-                      <p className="text-gray-600">Ghana</p>
+                      <a 
+                        href="https://www.google.com/maps/place/Accra,+Ghana/@5.6037168,-0.1869644,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644!16zL20vMGZuMmg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                      >
+                        Accra, Ghana
+                      </a>
                     </div>
                   </div>
                 </div>

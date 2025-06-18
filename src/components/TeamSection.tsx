@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { User, Crown, Code, Palette, Megaphone, Server } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -8,37 +8,37 @@ const TeamSection = () => {
       name: "Abdul-Rahaman Yussif",
       role: "Founder, CEO and Project Manager",
       description: "Visionary leader responsible for the company's overall strategic direction and growth.",
-      icon: Crown
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Abdul-Rashid Issah",
       role: "Chief Technology Officer (CTO)",
       description: "Oversees technological development and innovation within the company.",
-      icon: Code
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Mohammed Jawad Nassam",
       role: "Front-end Developer",
       description: "Specializes in implementing user interfaces and enhancing user experience.",
-      icon: Code
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Abdul-Razik",
       role: "Graphic Designer",
       description: "Creates visually appealing graphics for branding and marketing purposes.",
-      icon: Palette
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Abubakari Ahmad Tijani",
       role: "Media and Public Relations",
       description: "Manages media strategies, public relations activities, and content creation.",
-      icon: Megaphone
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
     },
     {
       name: "Magnus Tetteh",
       role: "Backend Developer",
       description: "Develops and maintains backend applications, ensuring high performance and usability.",
-      icon: Server
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=400&fit=crop&crop=face"
     }
   ];
 
@@ -56,8 +56,17 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-white">
               <CardContent className="p-8 text-center">
-                <div className="bg-tuuli-green/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-tuuli-green group-hover:text-white transition-colors duration-300">
-                  <member.icon className="h-10 w-10 text-tuuli-green group-hover:text-white" />
+                <div className="mb-6 mx-auto">
+                  <Avatar className="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <AvatarImage 
+                      src={member.image} 
+                      alt={member.name}
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="bg-tuuli-green text-white text-xl font-bold">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
                 <h3 className="text-xl font-bold text-tuuli-navy mb-2 group-hover:text-tuuli-green transition-colors duration-300">
                   {member.name}

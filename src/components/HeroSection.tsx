@@ -42,7 +42,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-tuuli-navy px-8 py-4 text-lg font-semibold"
+              className="border-white text-tuuli-navy hover:bg-white hover:text-tuuli-navy px-8 py-4 text-lg font-semibold"
               onClick={() => scrollToSection('services')}
             >
               View Our Services

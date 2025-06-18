@@ -8,7 +8,7 @@ const TeamSection = () => {
       name: "Abdul-Rahaman Yussif",
       role: "Founder, CEO and Project Manager",
       description: "Visionary leader responsible for the company's overall strategic direction and growth.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYussif.48280139.jpg&w=1080&q=75"
     },
     {
       name: "Abdul-Rashid Issah",
@@ -20,25 +20,25 @@ const TeamSection = () => {
       name: "Mohammed Jawad Nassam",
       role: "Front-end Developer",
       description: "Specializes in implementing user interfaces and enhancing user experience.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
+      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJawad.43fc5700.jpg&w=1920&q=75"
     },
     {
       name: "Abdul-Razik",
       role: "Graphic Designer",
       description: "Creates visually appealing graphics for branding and marketing purposes.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRazik.0ec74caf.jpg&w=1920&q=75"
     },
     {
       name: "Abubakari Ahmad Tijani",
       role: "Media and Public Relations",
       description: "Manages media strategies, public relations activities, and content creation.",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTijani.2cff26e1.jpg&w=3840&q=75"
     },
     {
       name: "Magnus Tetteh",
       role: "Backend Developer",
       description: "Develops and maintains backend applications, ensuring high performance and usability.",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=400&fit=crop&crop=face"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHAPnIsYpbjFg/profile-displayphoto-shrink_800_800/B4DZXdO2wWHsAc-/0/1743173415757?e=1755734400&v=beta&t=dkwIQ1l_c32OEa0XIR4c9OuUev7Rbz2hANuspGaEtBk"
     }
   ];
 

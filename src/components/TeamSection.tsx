@@ -12,27 +12,27 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/AbdulRahamanYussif",
+          url: "https://x.com/YussifGomda9247",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/abdul-rahaman-yussif",
+          url: "https://www.linkedin.com/in/yussif-abdul-rahaman/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/abdul.rahaman.yussif",
+          url: "https://www.facebook.com/profile.php?id=100075486901277",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
-          url: "https://github.com/abdulrahamanyussif",
+          url: "https://github.com/YUSSIF62",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/abdul_rahaman_yussif",
+          url: "https://www.instagram.com/yussif_ary/",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]
@@ -45,27 +45,27 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/AbdulRashidIssah",
+          url: "https://x.com/AmAbdel",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/abdul-rashid-issah",
+          url: "https://www.linkedin.com/in/amabdel/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/abdul.rashid.issah",
+          url: "https://www.facebook.com/AmAbdel",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
-          url: "https://github.com/abdulrashidissah",
+          url: "https://github.com/AmAbdel",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/abdul_rashid_issah",
+          url: "https://www.instagram.com/AmAbdel",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]
@@ -78,27 +78,27 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/MohammedJawadNassam",
+          url: "https://x.com/Nassam_Jawad",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/mohammed-jawad-nassam",
+          url: "https://www.linkedin.com/in/nassam-mohammed-jawad-777b2b230/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/mohammed.jawad.nassam",
+          url: "https://www.facebook.com/code.pj.7",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
-          url: "https://github.com/mohammedjawadnassam",
+          url: "https://github.com/Jawadx7",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/mohammed_jawad_nassam",
+          url: "https://www.instagram.com/jawad_nassam/",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]
@@ -111,7 +111,7 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/AbdulRazikDesign",
+          url: "https://x.com/iRazikGraphix",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
@@ -121,14 +121,10 @@ const TeamSection = () => {
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/abdul.razik.design",
+          url: "https://www.facebook.com/abdul.razik.280358",
           color: "text-blue-600 hover:text-blue-700"
         },
-        { 
-          icon: Github, 
-          url: "https://github.com/abdulrazik",
-          color: "text-gray-800 hover:text-gray-900"
-        },
+       
         { 
           icon: Instagram, 
           url: "https://www.instagram.com/abdul_razik_design",
@@ -144,27 +140,23 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/AbubakariAhmadTijani",
+          url: "https://x.com/AbuAhmadTijani",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/abubakari-ahmad-tijani",
+          url: "https://www.linkedin.com/in/ahmad-tijani-abubakari/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/abubakari.ahmad.tijani",
+          url: "https://www.facebook.com/tijay.smart",
           color: "text-blue-600 hover:text-blue-700"
         },
-        { 
-          icon: Github, 
-          url: "https://github.com/abubakariahmad",
-          color: "text-gray-800 hover:text-gray-900"
-        },
+       
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/abubakari_ahmad_tijani",
+          url: "https://www.instagram.com/abubakariahmad.tijani/",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]
@@ -177,7 +169,7 @@ const TeamSection = () => {
       socialLinks: [
         { 
           icon: Twitter, 
-          url: "https://x.com/MagnusTetteh",
+          url: "https://x.com/bra_magnus?s=21&t=gxiADwvyZXxdG9XruEOeeA",
           color: "text-blue-400 hover:text-blue-500"
         },
         { 
@@ -187,17 +179,17 @@ const TeamSection = () => {
         },
         { 
           icon: Facebook, 
-          url: "https://web.facebook.com/magnus.tetteh",
+          url: "https://www.facebook.com/share/1AdApuyMK5/?mibextid=wwXIfr",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
-          url: "https://github.com/magnustetteh",
+          url: "https://github.com/magnus984",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/magnus_tetteh",
+          url: "https://www.instagram.com/mrr.magnus/",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]

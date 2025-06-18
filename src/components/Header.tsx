@@ -6,6 +6,13 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
@@ -36,7 +43,10 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-tuuli-green hover:bg-tuuli-green/90 text-white">
+            <Button 
+              className="bg-tuuli-green hover:bg-tuuli-green/90 text-white"
+              onClick={() => scrollToSection('contact')}
+            >
               Get Started
             </Button>
           </nav>
@@ -64,7 +74,13 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-tuuli-green hover:bg-tuuli-green/90 text-white w-full">
+              <Button 
+                className="bg-tuuli-green hover:bg-tuuli-green/90 text-white w-full"
+                onClick={() => {
+                  scrollToSection('contact');
+                  setIsMenuOpen(false);
+                }}
+              >
                 Get Started
               </Button>
             </div>

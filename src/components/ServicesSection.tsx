@@ -1,5 +1,5 @@
 
-import { Monitor, Smartphone, Palette, Settings, MessageSquare } from 'lucide-react';
+import { Monitor, Smartphone, Palette, Settings, MessageSquare, GraduationCap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ServicesSection = () => {
@@ -33,6 +33,12 @@ const ServicesSection = () => {
       title: "SMS Services",
       description: "Bulk SMS campaigns, API integration, and comprehensive SMS marketing strategies for your business.",
       features: ["Bulk SMS Campaigns", "SMS API Integration", "Marketing Strategies", "Automated Messaging"]
+    },
+    {
+      icon: GraduationCap,
+      title: "Mentorship & Training",
+      description: "Professional development programs, coding bootcamps, and personalized mentorship in technology skills.",
+      features: ["Coding Bootcamps", "Technology Training", "Career Mentorship", "Skill Development Programs"]
     }
   ];
 

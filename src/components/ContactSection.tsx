@@ -1,11 +1,85 @@
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, Globe, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { useContactForm } from '@/hooks/useContactForm';
 
 const ContactSection = () => {
+  const { submitForm, isSubmitting } = useContactForm();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    serviceNeeded: 'Select a service',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+    
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (formData.serviceNeeded === 'Select a service') {
+      newErrors.serviceNeeded = 'Please select a service';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    const result = await submitForm(formData);
+    
+    if (result.success) {
+      // Reset form on success
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        serviceNeeded: 'Select a service',
+        message: ''
+      });
+      setErrors({});
+    }
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -23,43 +97,107 @@ const ContactSection = () => {
               <CardTitle className="text-2xl font-bold text-tuuli-navy">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                  <Input placeholder="Your first name" />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      First Name *
+                    </label>
+                    <Input 
+                      placeholder="Your first name" 
+                      value={formData.firstName}
+                      onChange={(e) => handleInputChange('firstName', e.target.value)}
+                      className={errors.firstName ? 'border-red-500' : ''}
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                    )}
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name *
+                    </label>
+                    <Input 
+                      placeholder="Your last name" 
+                      value={formData.lastName}
+                      onChange={(e) => handleInputChange('lastName', e.target.value)}
+                      className={errors.lastName ? 'border-red-500' : ''}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                    )}
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                  <Input placeholder="Your last name" />
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Email *
+                  </label>
+                  <Input 
+                    type="email" 
+                    placeholder="your.email@example.com" 
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    className={errors.email ? 'border-red-500' : ''}
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                <Input type="email" placeholder="your.email@example.com" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                <Input type="tel" placeholder="+233 XX XXX XXXX" />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
-                <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-tuuli-green">
-                  <option>Select a service</option>
-                  <option>Web Development</option>
-                  <option>Mobile App Development</option>
-                  <option>Graphic Design</option>
-                  <option>IT Consultancy</option>
-                  <option>SMS Services</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <Textarea placeholder="Tell us about your project..." rows={4} />
-              </div>
-              <Button className="w-full bg-tuuli-green hover:bg-tuuli-green/90 text-white py-3">
-                Send Message
-              </Button>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                  <Input 
+                    type="tel" 
+                    placeholder="+233 XX XXX XXXX" 
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Needed *
+                  </label>
+                  <select 
+                    className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-tuuli-green ${
+                      errors.serviceNeeded ? 'border-red-500' : ''
+                    }`}
+                    value={formData.serviceNeeded}
+                    onChange={(e) => handleInputChange('serviceNeeded', e.target.value)}
+                  >
+                    <option>Select a service</option>
+                    <option>Web Development</option>
+                    <option>Mobile App Development</option>
+                    <option>Graphic Design</option>
+                    <option>IT Consultancy</option>
+                    <option>SMS Services</option>
+                    <option>Other</option>
+                  </select>
+                  {errors.serviceNeeded && (
+                    <p className="text-red-500 text-sm mt-1">{errors.serviceNeeded}</p>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Message *
+                  </label>
+                  <Textarea 
+                    placeholder="Tell us about your project..." 
+                    rows={4} 
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className={errors.message ? 'border-red-500' : ''}
+                  />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                  )}
+                </div>
+                <Button 
+                  type="submit"
+                  className="w-full bg-tuuli-green hover:bg-tuuli-green/90 text-white py-3"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 

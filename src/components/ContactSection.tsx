@@ -1,14 +1,13 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, Globe, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { useContactForm } from '@/hooks/useContactForm';
+import { useEmailJS } from '@/hooks/useEmailJS';
 
 const ContactSection = () => {
-  const { submitForm, isSubmitting } = useContactForm();
+  const { submitForm, isSubmitting } = useEmailJS();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -58,12 +57,12 @@ const ContactSection = () => {
       return;
     }
 
-    console.log('Form validation passed, submitting...');
+    console.log('Form validation passed, submitting via EmailJS...');
     const result = await submitForm(formData);
     console.log('Submit result:', result);
     
     if (result.success) {
-      console.log('Form submitted successfully');
+      console.log('Form submitted successfully via EmailJS');
       // Reset form on success
       setFormData({
         firstName: '',

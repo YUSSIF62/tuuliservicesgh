@@ -49,11 +49,11 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-tuuli-navy mb-6">What Our Clients Say</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">What Our Clients Say</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it - hear from the businesses we've helped transform
           </p>
         </div>
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
                   ))}
                 </div>
                 
-                <blockquote className="text-gray-600 leading-relaxed mb-6 italic">
+                <blockquote className="text-muted-foreground leading-relaxed mb-6 italic">
                   "{testimonial.testimonial}"
                 </blockquote>
                 
@@ -79,8 +79,8 @@ const TestimonialsSection = () => {
                     className="w-12 h-12 rounded-full object-cover mr-4"
                   />
                   <div>
-                    <div className="font-semibold text-tuuli-navy">{testimonial.name}</div>
-                    <div className="text-sm text-gray-500">{testimonial.position}</div>
+                    <div className="font-semibold text-foreground">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.position}</div>
                   </div>
                 </div>
               </CardContent>
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg text-gray-600 mb-4">
+          <p className="text-lg text-muted-foreground mb-4">
             Ready to join our satisfied clients?
           </p>
           <a 

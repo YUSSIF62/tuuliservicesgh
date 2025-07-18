@@ -86,11 +86,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-tuuli-navy mb-6">Get In Touch</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Get In Touch</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to transform your digital presence? Let's discuss how Tuuli can help your business thrive
           </p>
         </div>
@@ -99,13 +99,13 @@ const ContactSection = () => {
           {/* Contact Form */}
           <Card className="shadow-lg border-0">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-tuuli-navy">Send us a Message</CardTitle>
+              <CardTitle className="text-2xl font-bold text-foreground">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       First Name *
                     </label>
                     <Input 
@@ -119,7 +119,7 @@ const ContactSection = () => {
                     )}
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name *
                     </label>
                     <Input 
@@ -134,7 +134,7 @@ const ContactSection = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Email *
                   </label>
                   <Input 
@@ -149,7 +149,7 @@ const ContactSection = () => {
                   )}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Phone</label>
                   <Input 
                     type="tel" 
                     placeholder="+233 XX XXX XXXX" 
@@ -158,11 +158,11 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Service Needed *
                   </label>
                   <select 
-                    className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-tuuli-green ${
+                    className={`w-full px-3 py-2 border border-input bg-background text-foreground rounded-md focus:outline-none focus:ring-2 focus:ring-tuuli-green ${
                       errors.serviceNeeded ? 'border-red-500' : ''
                     }`}
                     value={formData.serviceNeeded}
@@ -181,7 +181,7 @@ const ContactSection = () => {
                   )}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Message *
                   </label>
                   <Textarea 
@@ -210,7 +210,7 @@ const ContactSection = () => {
           <div className="space-y-8">
             <Card className="shadow-lg border-0">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-tuuli-navy mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <a 
@@ -220,10 +220,10 @@ const ContactSection = () => {
                       <Mail className="h-6 w-6 text-tuuli-green" />
                     </a>
                     <div>
-                      <p className="font-semibold text-tuuli-navy">Email</p>
+                      <p className="font-semibold text-foreground">Email</p>
                       <a 
                         href="mailto:tuuli.inc@gmail.com" 
-                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                        className="text-muted-foreground hover:text-tuuli-green transition-colors duration-200"
                       >
                         tuuli.inc@gmail.com
                       </a>
@@ -237,10 +237,10 @@ const ContactSection = () => {
                       <Phone className="h-6 w-6 text-tuuli-green" />
                     </a>
                     <div>
-                      <p className="font-semibold text-tuuli-navy">Phone</p>
+                      <p className="font-semibold text-foreground">Phone</p>
                       <a 
                         href="tel:+233558779247" 
-                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                        className="text-muted-foreground hover:text-tuuli-green transition-colors duration-200"
                       >
                         +233 55 877 9247
                       </a>
@@ -251,8 +251,8 @@ const ContactSection = () => {
                       <Globe className="h-6 w-6 text-tuuli-green" />
                     </div>
                     <div>
-                      <p className="font-semibold text-tuuli-navy">Website</p>
-                      <p className="text-gray-600">tuuli.vercel.app</p>
+                      <p className="font-semibold text-foreground">Website</p>
+                      <p className="text-muted-foreground">tuuli.vercel.app</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -265,12 +265,12 @@ const ContactSection = () => {
                       <MapPin className="h-6 w-6 text-tuuli-green" />
                     </a>
                     <div>
-                      <p className="font-semibold text-tuuli-navy">Location</p>
+                      <p className="font-semibold text-foreground">Location</p>
                       <a 
                         href="https://www.google.com/maps/place/Accra,+Ghana/@5.6037168,-0.1869644,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf9084b2b7a773:0xbed14ed8650e2dd3!8m2!3d5.6037168!4d-0.1869644!16zL20vMGZuMmg"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-tuuli-green transition-colors duration-200"
+                        className="text-muted-foreground hover:text-tuuli-green transition-colors duration-200"
                       >
                         Accra, Ghana
                       </a>
@@ -283,43 +283,43 @@ const ContactSection = () => {
             {/* Social Media */}
             <Card className="shadow-lg border-0">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-tuuli-navy mb-6">Follow Us</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <a 
                     href="https://x.com/TuuliIncorpora1?t=NWV9sbjDV-fqFGFUDcr63w&s=35" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
+                    className="flex items-center space-x-3 p-4 bg-muted rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
                   >
                     <Twitter className="h-6 w-6 text-blue-400" />
-                    <span className="font-medium">Twitter</span>
+                    <span className="font-medium text-foreground">Twitter</span>
                   </a>
                   <a 
                     href="https://web.facebook.com/profile.php?id=100091131316887&mibextid=rS40aB7S9Ucbxw6v&_rdc=1&_rdr" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
+                    className="flex items-center space-x-3 p-4 bg-muted rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
                   >
                     <Facebook className="h-6 w-6 text-blue-600" />
-                    <span className="font-medium">Facebook</span>
+                    <span className="font-medium text-foreground">Facebook</span>
                   </a>
                   <a 
                     href="https://www.linkedin.com/company/92875843/admin/dashboard/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
+                    className="flex items-center space-x-3 p-4 bg-muted rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
                   >
                     <Linkedin className="h-6 w-6 text-blue-700" />
-                    <span className="font-medium">LinkedIn</span>
+                    <span className="font-medium text-foreground">LinkedIn</span>
                   </a>
                   <a 
                     href="https://www.instagram.com/tuuli.inc/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
+                    className="flex items-center space-x-3 p-4 bg-muted rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
                   >
                     <Instagram className="h-6 w-6 text-pink-600" />
-                    <span className="font-medium">Instagram</span>
+                    <span className="font-medium text-foreground">Instagram</span>
                   </a>
                 </div>
               </CardContent>

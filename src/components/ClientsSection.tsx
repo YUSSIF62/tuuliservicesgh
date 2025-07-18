@@ -28,11 +28,11 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-tuuli-navy mb-6">Our Trusted Clients</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Trusted Clients</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We're proud to work with amazing companies and organizations across Ghana and beyond
           </p>
         </div>
@@ -41,22 +41,22 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group"
             >
-              <div className="relative overflow-hidden rounded-md bg-gray-100 h-16 flex items-center justify-center">
+              <div className="relative overflow-hidden rounded-md bg-muted h-16 flex items-center justify-center">
                 <img 
                   src={client.logo} 
                   alt={`${client.name} logo`}
                   className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-              <p className="text-sm font-medium text-gray-700 text-center mt-3">{client.name}</p>
+              <p className="text-sm font-medium text-foreground text-center mt-3">{client.name}</p>
             </div>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-muted-foreground">
             Join our growing list of satisfied clients and experience the Tuuli difference
           </p>
         </div>

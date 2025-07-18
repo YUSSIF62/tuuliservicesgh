@@ -43,11 +43,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-tuuli-navy mb-6">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Services</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive technology solutions designed to empower your business and drive digital growth
           </p>
         </div>
@@ -59,17 +59,17 @@ const ServicesSection = () => {
                 <div className="bg-tuuli-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-tuuli-green group-hover:text-white transition-colors duration-300">
                   <service.icon className="h-8 w-8 text-tuuli-green group-hover:text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold text-tuuli-navy group-hover:text-tuuli-green transition-colors duration-300">
+                <CardTitle className="text-xl font-bold text-foreground group-hover:text-tuuli-green transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <CardDescription className="text-gray-600 leading-relaxed">
+                <CardDescription className="text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-2 h-2 bg-tuuli-green rounded-full mr-3"></div>
                       {feature}
                     </li>
@@ -82,7 +82,7 @@ const ServicesSection = () => {
 
         {/* Why Choose Us */}
         <div className="mt-20">
-          <h3 className="text-3xl font-bold text-tuuli-navy text-center mb-12">Why Choose Tuuli?</h3>
+          <h3 className="text-3xl font-bold text-foreground text-center mb-12">Why Choose Tuuli?</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -110,9 +110,9 @@ const ServicesSection = () => {
                 description: "We provide ongoing support and maintenance for all our solutions."
               }
             ].map((item, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:bg-tuuli-green/5 transition-colors duration-300">
-                <h4 className="text-lg font-semibold text-tuuli-navy mb-3">{item.title}</h4>
-                <p className="text-gray-600">{item.description}</p>
+              <div key={index} className="text-center p-6 bg-muted rounded-lg hover:bg-tuuli-green/5 transition-colors duration-300">
+                <h4 className="text-lg font-semibold text-foreground mb-3">{item.title}</h4>
+                <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>

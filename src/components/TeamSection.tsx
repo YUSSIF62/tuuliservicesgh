@@ -197,18 +197,18 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50">
+    <section id="team" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-tuuli-navy mb-6">Our Team</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Team</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Meet the talented professionals behind Tuuli Service's innovative solutions
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-white">
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-card">
               <CardContent className="p-8 text-center">
                 <div className="mb-6 mx-auto">
                   <Avatar className="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -222,11 +222,11 @@ const TeamSection = () => {
                     </AvatarFallback>
                   </Avatar>
                 </div>
-                <h3 className="text-xl font-bold text-tuuli-navy mb-2 group-hover:text-tuuli-green transition-colors duration-300">
+                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-tuuli-green transition-colors duration-300">
                   {member.name}
                 </h3>
                 <p className="text-tuuli-green font-semibold mb-4">{member.role}</p>
-                <p className="text-gray-600 leading-relaxed mb-6">{member.description}</p>
+                <p className="text-muted-foreground leading-relaxed mb-6">{member.description}</p>
                 
                 {/* Social Media Icons */}
                 <div className="flex justify-center space-x-3">
@@ -236,7 +236,7 @@ const TeamSection = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200 ${social.color}`}
+                      className={`p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors duration-200 ${social.color}`}
                     >
                       <social.icon className="h-4 w-4" />
                     </a>

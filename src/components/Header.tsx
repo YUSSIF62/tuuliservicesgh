@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { ThemeToggle } from './theme-toggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,14 +23,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-tuuli-green rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">T</span>
             </div>
-            <span className="text-2xl font-bold text-tuuli-navy">Tuuli Service</span>
+            <span className="text-2xl font-bold text-foreground">Tuuli Service</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -38,11 +39,12 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-tuuli-green transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
               </a>
             ))}
+            <ThemeToggle />
             <Button 
               className="bg-tuuli-green hover:bg-tuuli-green/90 text-white"
               onClick={() => scrollToSection('contact')}
@@ -62,27 +64,30 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <nav className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-700 hover:text-tuuli-green transition-colors duration-200 font-medium"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button 
-                className="bg-tuuli-green hover:bg-tuuli-green/90 text-white w-full"
-                onClick={() => {
-                  scrollToSection('contact');
-                  setIsMenuOpen(false);
-                }}
-              >
-                Get Started
-              </Button>
+              <div className="flex items-center justify-between">
+                <ThemeToggle />
+                <Button 
+                  className="bg-tuuli-green hover:bg-tuuli-green/90 text-white flex-1 ml-4"
+                  onClick={() => {
+                    scrollToSection('contact');
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  Get Started
+                </Button>
+              </div>
             </div>
           </nav>
         )}

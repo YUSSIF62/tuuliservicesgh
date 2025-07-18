@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -51,14 +50,19 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submitted with data:', formData);
     
     if (!validateForm()) {
+      console.log('Form validation failed:', errors);
       return;
     }
 
+    console.log('Form validation passed, submitting via Supabase...');
     const result = await submitForm(formData);
+    console.log('Submit result:', result);
     
     if (result.success) {
+      console.log('Form submitted successfully via Supabase');
       // Reset form on success
       setFormData({
         firstName: '',
@@ -73,6 +77,7 @@ const ContactSection = () => {
   };
 
   const handleInputChange = (field: string, value: string) => {
+    console.log(`Field ${field} changed to:`, value);
     setFormData(prev => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
     if (errors[field]) {

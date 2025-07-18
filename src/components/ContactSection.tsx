@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, Globe, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { useEmailJS } from '@/hooks/useEmailJS';
+import { useContactForm } from '@/hooks/useContactForm';
 
 const ContactSection = () => {
-  const { submitForm, isSubmitting } = useEmailJS();
+  const { submitForm, isSubmitting } = useContactForm();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -57,12 +57,12 @@ const ContactSection = () => {
       return;
     }
 
-    console.log('Form validation passed, submitting via EmailJS...');
+    console.log('Form validation passed, submitting via Supabase...');
     const result = await submitForm(formData);
     console.log('Submit result:', result);
     
     if (result.success) {
-      console.log('Form submitted successfully via EmailJS');
+      console.log('Form submitted successfully via Supabase');
       // Reset form on success
       setFormData({
         firstName: '',

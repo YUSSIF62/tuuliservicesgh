@@ -8,7 +8,7 @@ const TeamSection = () => {
       name: "Abdul-Rahaman Yussif",
       role: "Founder, CEO and Project Manager",
       description: "Visionary leader responsible for the company's overall strategic direction and growth.",
-      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FYussif.48280139.jpg&w=1080&q=75",
+      image: "/images/yussif.jpg",
       socialLinks: [
         { 
           icon: Twitter, 
@@ -41,7 +41,7 @@ const TeamSection = () => {
       name: "Abdul-Rashid Issah",
       role: "Chief Technology Officer (CTO)",
       description: "Oversees technological development and innovation within the company.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: "/images/rashid.jpg",
       socialLinks: [
         { 
           icon: Twitter, 
@@ -74,7 +74,7 @@ const TeamSection = () => {
       name: "Mohammed Jawad Nassam",
       role: "Front-end Developer",
       description: "Specializes in implementing user interfaces and enhancing user experience.",
-      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJawad.43fc5700.jpg&w=1920&q=75",
+      image: "/images/jawad.jpg",
       socialLinks: [
         { 
           icon: Twitter, 
@@ -107,7 +107,7 @@ const TeamSection = () => {
       name: "Abdul-Razik",
       role: "Graphic Designer",
       description: "Creates visually appealing graphics for branding and marketing purposes.",
-      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FRazik.0ec74caf.jpg&w=1920&q=75",
+      image: "/images/razik.jpg",
       socialLinks: [
         { 
           icon: Twitter, 
@@ -136,7 +136,7 @@ const TeamSection = () => {
       name: "Abubakari Ahmad Tijani",
       role: "Media and Public Relations",
       description: "Manages media strategies, public relations activities, and content creation.",
-      image: "https://tuuli.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTijani.2cff26e1.jpg&w=3840&q=75",
+      image: "/images/tijani.jpg",
       socialLinks: [
         { 
           icon: Twitter, 
@@ -165,7 +165,7 @@ const TeamSection = () => {
       name: "Magnus Tetteh",
       role: "Backend Developer",
       description: "Develops and maintains backend applications, ensuring high performance and usability.",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHAPnIsYpbjFg/profile-displayphoto-shrink_800_800/B4DZXdO2wWHsAc-/0/1743173415757?e=1755734400&v=beta&t=dkwIQ1l_c32OEa0XIR4c9OuUev7Rbz2hANuspGaEtBk",
+      image: "/images/magnus.jpg",
       socialLinks: [
         { 
           icon: Twitter, 

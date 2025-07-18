@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-tuuli-green rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
+                <span className="text-white font-bold text-xl">TS</span>
               </div>
-              <span className="text-2xl font-bold">Tuuli Service</span>
+              <span className="text-2xl font-bold">TUULISERVICESGH.COM</span>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
               Empowering individuals and businesses globally with innovative technology solutions. 

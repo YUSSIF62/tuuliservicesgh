@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, Globe, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import { useContactForm } from '@/hooks/useContactForm';
+import { useEmailJS } from '@/hooks/useEmailJS';
 
 const ContactSection = () => {
-  const { submitForm, isSubmitting } = useContactForm();
+  const { submitForm, isSubmitting } = useEmailJS();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -104,32 +104,24 @@ const ContactSection = () => {
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
+                  <div className="md:col-span-2">
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      First Name *
+                      Full Name *
                     </label>
                     <Input 
-                      placeholder="Your first name" 
-                      value={formData.firstName}
-                      onChange={(e) => handleInputChange('firstName', e.target.value)}
-                      className={errors.firstName ? 'border-red-500' : ''}
+                      placeholder="Your full name" 
+                      value={`${formData.firstName} ${formData.lastName}`.trim()}
+                      onChange={(e) => {
+                        const names = e.target.value.split(' ');
+                        const firstName = names[0] || '';
+                        const lastName = names.slice(1).join(' ') || '';
+                        handleInputChange('firstName', firstName);
+                        handleInputChange('lastName', lastName);
+                      }}
+                      className={errors.firstName || errors.lastName ? 'border-red-500' : ''}
                     />
-                    {errors.firstName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
-                    )}
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Last Name *
-                    </label>
-                    <Input 
-                      placeholder="Your last name" 
-                      value={formData.lastName}
-                      onChange={(e) => handleInputChange('lastName', e.target.value)}
-                      className={errors.lastName ? 'border-red-500' : ''}
-                    />
-                    {errors.lastName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                    {(errors.firstName || errors.lastName) && (
+                      <p className="text-red-500 text-sm mt-1">Full name is required</p>
                     )}
                   </div>
                 </div>

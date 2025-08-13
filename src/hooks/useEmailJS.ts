@@ -36,10 +36,10 @@ export const useEmailJS = () => {
       console.log('useEmailJS: Template params:', templateParams);
 
       const result = await emailjs.send(
-        'service_udo8nwk', // Your Service ID
-        'template_aihqr77', // Your Template ID
+        'service_udo8nwk',
+        'template_aihqr77',
         templateParams,
-        'QreFmh9o0EIZKjg87' // Your Public Key
+        'QreFmh9o0EIZKjg87'
       );
 
       console.log('useEmailJS: EmailJS response:', result);

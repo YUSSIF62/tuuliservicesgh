@@ -57,12 +57,12 @@ const ContactSection = () => {
       return;
     }
 
-    console.log('Form validation passed, submitting via Supabase...');
+    console.log('Form validation passed, submitting via EmailJS...');
     const result = await submitForm(formData);
     console.log('Submit result:', result);
     
     if (result.success) {
-      console.log('Form submitted successfully via Supabase');
+      console.log('Form submitted successfully via EmailJS');
       // Reset form on success
       setFormData({
         firstName: '',

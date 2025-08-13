@@ -25,7 +25,8 @@ export const useEmailJS = () => {
       
       // Prepare template parameters for EmailJS
       const templateParams = {
-        from_name: `${formData.firstName} ${formData.lastName}`,
+        first_name: formData.firstName,
+        last_name: formData.lastName,
         from_email: formData.email,
         phone: formData.phone || 'Not provided',
         service_needed: formData.serviceNeeded,

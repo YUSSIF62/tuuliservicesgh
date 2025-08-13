@@ -104,24 +104,32 @@ const ContactSection = () => {
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="md:col-span-2">
+                  <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Full Name *
+                      First Name *
                     </label>
                     <Input 
-                      placeholder="Your full name" 
-                      value={`${formData.firstName} ${formData.lastName}`.trim()}
-                      onChange={(e) => {
-                        const names = e.target.value.split(' ');
-                        const firstName = names[0] || '';
-                        const lastName = names.slice(1).join(' ') || '';
-                        handleInputChange('firstName', firstName);
-                        handleInputChange('lastName', lastName);
-                      }}
-                      className={errors.firstName || errors.lastName ? 'border-red-500' : ''}
+                      placeholder="First name" 
+                      value={formData.firstName}
+                      onChange={(e) => handleInputChange('firstName', e.target.value)}
+                      className={errors.firstName ? 'border-red-500' : ''}
                     />
-                    {(errors.firstName || errors.lastName) && (
-                      <p className="text-red-500 text-sm mt-1">Full name is required</p>
+                    {errors.firstName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                    )}
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Last Name *
+                    </label>
+                    <Input 
+                      placeholder="Last name" 
+                      value={formData.lastName}
+                      onChange={(e) => handleInputChange('lastName', e.target.value)}
+                      className={errors.lastName ? 'border-red-500' : ''}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
                     )}
                   </div>
                 </div>

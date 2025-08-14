@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+Tuuli Services – Company Website
+README.md
 
-## Project info
+Live Site: [https://tuuliservicesgh.vercel.app]
 
-**URL**: https://lovable.dev/projects/041bc4c5-11dc-4316-a627-e3b93cc98d63
+🌍 Overview
+This repository hosts the official website of Tuuli Services, a Ghana-based tech company offering:
 
-## How can I edit this code?
+Hotel Management SaaS (Hotleo platform)
 
-There are several ways of editing your application.
+E-Voting Solutions (Blockchain-backed)
 
-**Use Lovable**
+SMS/Communication APIs (MTN Mobile Money integration)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/041bc4c5-11dc-4316-a627-e3b93cc98d63) and start prompting.
+Custom Software Development
 
-Changes made via Lovable will be committed automatically to this repo.
+🛠 Tech Stack
+Category	Tools	Why We Chose It
+Frontend	Next.js, React, Chakra UI	SEO-friendly, fast rendering, and accessible components
+Backend	Node.js (API routes), Firebase (Auth/DB)	Scalable, real-time updates for dashboards
+Hosting	Vercel (Serverless) + AWS S3 (Storage)	Zero-downtime deployments, global CDN
+CMS	Sanity.io	Customizable content models for case studies/blog (Ghana-focused)
+Analytics	Google Analytics 4 + Hotjar	Track user behavior (especially for hotel SaaS demos)
+🚀 Setup Instructions
+Prerequisites
+Node.js v18+
 
-**Use your preferred IDE**
+Yarn (npm install -g yarn)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Firebase CLI (npm install -g firebase-tools)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Local Development
+Clone the repo:
 
-Follow these steps:
+bash
+git clone https://github.com/tuuli-services/website.git  
+cd website  
+Install dependencies:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+bash
+yarn install  
+Configure environment variables:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+bash
+cp .env.example .env.local  
+Add your keys (get these from the team lead):
 
-# Step 3: Install the necessary dependencies.
-npm i
+text
+NEXT_PUBLIC_FIREBASE_API_KEY=xxx  
+NEXT_PUBLIC_SANITY_PROJECT_ID=xxx  
+Run the dev server:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+bash
+yarn dev  
+Open http://localhost:3000.
 
-**Edit a file directly in GitHub**
+📂 Project Structure
+text
+.  
+├── components/       # Reusable components (e.g., <PricingTable />)  
+├── lib/              # Utilities (Firebase hooks, SMS helpers)  
+├── pages/            # Next.js routes:  
+│   ├── services/     # /services/saas, /services/e-voting  
+│   └── blog/         # Dynamic Sanity.io-powered posts  
+├── public/           # Logos, favicons (use `tuuli-` prefix for files)  
+├── styles/           # Chakra UI theme overrides (brand colors: #0A8A07, #012E40)  
+└── sanity/           # CMS schemas (e.g., define ‘CaseStudy’ content types)  
+🌐 Key Pages
+Page	Tech Used	Notes
+Home	Framer Motion (animations)	Hero video autoplays on desktop only (save mobile bandwidth)
+/services/saas	Firebase Auth demo	Hotel managers can test a live demo with Ghanaian payment gateways
+/contact	Twilio API + Formik	SMS confirmations sent to +233 numbers
+🔌 Ghana-Specific Integrations
+MTN Mobile Money API: For payment processing.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Ghana Post GPS: Address validation in contact forms.
 
-**Use GitHub Codespaces**
+Localization: i18n for English/Twi support (WIP).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🤝 Contributing
+Use the dev- branch prefix:
 
-## What technologies are used for this project?
+bash
+git checkout -b dev-feature/sms-form  
+Follow Chakra UI conventions.
 
-This project is built with:
+Test responsiveness (Mobile: 360px, Desktop: 1440px).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Before Merging:
 
-## How can I deploy this project?
+Run Lighthouse audit (yarn build && yarn lighthouse).
 
-Simply open [Lovable](https://lovable.dev/projects/041bc4c5-11dc-4316-a627-e3b93cc98d63) and click on Share -> Publish.
+Ensure all Firebase keys are never committed.
 
-## Can I connect a custom domain to my Lovable project?
+📄 License
+MIT © Tuuli Services GH.
 
-Yes, you can!
+📬 Contact
+Tech Lead: Issah Abdul-Rashid (@CTO on Slack)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Urgent Issues: File under GitHub Issues with label priority:high.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+✨ Pro Tip: Use yarn export to generate a static version for backup!

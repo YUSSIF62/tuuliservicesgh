@@ -18,9 +18,9 @@ const ServicesSection = () => {
     },
     {
       icon: Palette,
-      title: "Graphic Design",
+      title: "Design",
       description: "Professional branding, marketing materials, and digital graphics that make your business stand out.",
-      features: ["Branding & Identity", "Marketing Materials", "Digital Graphics", "Social Media Assets"]
+      features: ["Branding & Identity", "Marketing Materials", "UI/UX Design", "Digital Graphics", "Social Media Assets"]
     },
     {
       icon: Settings,

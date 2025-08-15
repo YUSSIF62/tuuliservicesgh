@@ -171,9 +171,10 @@ const ContactSection = () => {
                     <option>Select a service</option>
                     <option>Web Development</option>
                     <option>Mobile App Development</option>
-                    <option>Graphic Design</option>
+                    <option>Design</option>
                     <option>IT Consultancy</option>
                     <option>SMS Services</option>
+                    <option>Digital Marketing</option>
                     <option>Other</option>
                   </select>
                   {errors.serviceNeeded && (
@@ -252,7 +253,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">Website</p>
-                      <p className="text-muted-foreground">tuuli.vercel.app</p>
+                      <p className="text-muted-foreground">tuuliservicesgh.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">

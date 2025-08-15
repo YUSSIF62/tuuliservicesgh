@@ -60,7 +60,7 @@ const TeamSection = () => {
         },
         { 
           icon: Github, 
-          url: "https://github.com/AmAbdel",
+          url: "https://github.com/abdulrashid232",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 

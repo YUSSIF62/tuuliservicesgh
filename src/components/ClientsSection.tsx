@@ -3,8 +3,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const ClientsSection = () => {
   const clients = [
     {
-      name: "TechFlow Solutions",
-      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=200&h=100&fit=crop&crop=center"
+      name: "Vision Star Academy",
+      logo: "/images/logo.png"
     },
     {
       name: "Digital Innovators",

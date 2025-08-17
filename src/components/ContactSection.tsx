@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, Globe, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin, Facebook, X, Linkedin, Instagram } from 'lucide-react';
 import { useEmailJS } from '@/hooks/useEmailJS';
 
 const ContactSection = () => {
@@ -215,7 +215,7 @@ const ContactSection = () => {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <a 
-                      href="mailto:tuuli.inc@gmail.com"
+                      href="mailto:info@tuuliservicesgh.com"
                       className="bg-tuuli-green/10 p-3 rounded-full hover:bg-tuuli-green/20 transition-colors duration-200 cursor-pointer"
                     >
                       <Mail className="h-6 w-6 text-tuuli-green" />
@@ -223,10 +223,10 @@ const ContactSection = () => {
                     <div>
                       <p className="font-semibold text-foreground">Email</p>
                       <a 
-                        href="mailto:tuuli.inc@gmail.com" 
+                        href="mailto:info@tuuliservicesgh.com" 
                         className="text-muted-foreground hover:text-tuuli-green transition-colors duration-200"
                       >
-                        tuuli.inc@gmail.com
+                        info@tuuliservicesgh.com
                       </a>
                     </div>
                   </div>
@@ -292,8 +292,8 @@ const ContactSection = () => {
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 p-4 bg-muted rounded-lg hover:bg-tuuli-green/10 transition-colors duration-200"
                   >
-                    <Twitter className="h-6 w-6 text-blue-400" />
-                    <span className="font-medium text-foreground">Twitter</span>
+                    <X className="h-6 w-6 text-foreground" />
+                    <span className="font-medium text-foreground">X</span>
                   </a>
                   <a 
                     href="https://web.facebook.com/profile.php?id=100091131316887&mibextid=rS40aB7S9Ucbxw6v&_rdc=1&_rdr" 

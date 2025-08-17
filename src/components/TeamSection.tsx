@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Twitter, Linkedin, Facebook, Github, Instagram } from 'lucide-react';
+import { X, Linkedin, Facebook, Github, Instagram } from 'lucide-react';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -11,9 +11,9 @@ const TeamSection = () => {
       image: "/images/yussif.jpg",
       socialLinks: [
         { 
-          icon: Twitter, 
+          icon: X, 
           url: "https://x.com/YussifGomda9247",
-          color: "text-blue-400 hover:text-blue-500"
+          color: "text-foreground hover:text-muted-foreground"
         },
         { 
           icon: Linkedin, 
@@ -44,9 +44,9 @@ const TeamSection = () => {
       image: "/images/rashid.jpg",
       socialLinks: [
         { 
-          icon: Twitter, 
+          icon: X, 
           url: "https://x.com/AmAbdel",
-          color: "text-blue-400 hover:text-blue-500"
+          color: "text-foreground hover:text-muted-foreground"
         },
         { 
           icon: Linkedin, 
@@ -77,9 +77,9 @@ const TeamSection = () => {
       image: "/images/jawad.jpg",
       socialLinks: [
         { 
-          icon: Twitter, 
+          icon: X, 
           url: "https://x.com/Nassam_Jawad",
-          color: "text-blue-400 hover:text-blue-500"
+          color: "text-foreground hover:text-muted-foreground"
         },
         { 
           icon: Linkedin, 
@@ -104,92 +104,100 @@ const TeamSection = () => {
       ]
     },
     {
-      name: "Abdul-Razik",
-      role: "Graphic Designer",
-      description: "Creates visually appealing graphics for branding and marketing purposes.",
+      name: "Razik Abdul-Rahaman",
+      role: "Back-end Developer",
+      description: "Focuses on server-side logic and database management for robust applications.",
       image: "/images/razik.jpg",
       socialLinks: [
         { 
-          icon: Twitter, 
-          url: "https://x.com/iRazikGraphix",
-          color: "text-blue-400 hover:text-blue-500"
+          icon: X, 
+          url: "https://x.com/razik_abdul",
+          color: "text-foreground hover:text-muted-foreground"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/abdul-razik",
+          url: "https://www.linkedin.com/in/razik-abdul-rahaman/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://www.facebook.com/abdul.razik.280358",
-          color: "text-blue-600 hover:text-blue-700"
-        },
-       
-        { 
-          icon: Instagram, 
-          url: "https://www.instagram.com/abdul_razik_design",
-          color: "text-pink-600 hover:text-pink-700"
-        }
-      ]
-    },
-    {
-      name: "Abubakari Ahmad Tijani",
-      role: "Media and Public Relations",
-      description: "Manages media strategies, public relations activities, and content creation.",
-      image: "/images/tijani.jpg",
-      socialLinks: [
-        { 
-          icon: Twitter, 
-          url: "https://x.com/AbuAhmadTijani",
-          color: "text-blue-400 hover:text-blue-500"
-        },
-        { 
-          icon: Linkedin, 
-          url: "https://www.linkedin.com/in/ahmad-tijani-abubakari/",
-          color: "text-blue-700 hover:text-blue-800"
-        },
-        { 
-          icon: Facebook, 
-          url: "https://www.facebook.com/tijay.smart",
-          color: "text-blue-600 hover:text-blue-700"
-        },
-       
-        { 
-          icon: Instagram, 
-          url: "https://www.instagram.com/abubakariahmad.tijani/",
-          color: "text-pink-600 hover:text-pink-700"
-        }
-      ]
-    },
-    {
-      name: "Magnus Tetteh",
-      role: "Backend Developer",
-      description: "Develops and maintains backend applications, ensuring high performance and usability.",
-      image: "/images/magnus.jpg",
-      socialLinks: [
-        { 
-          icon: Twitter, 
-          url: "https://x.com/bra_magnus?s=21&t=gxiADwvyZXxdG9XruEOeeA",
-          color: "text-blue-400 hover:text-blue-500"
-        },
-        { 
-          icon: Linkedin, 
-          url: "https://www.linkedin.com/in/magnus-tetteh-b1b208213/",
-          color: "text-blue-700 hover:text-blue-800"
-        },
-        { 
-          icon: Facebook, 
-          url: "https://www.facebook.com/share/1AdApuyMK5/?mibextid=wwXIfr",
+          url: "https://www.facebook.com/razik.abdulrahaman",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
-          url: "https://github.com/magnus984",
+          url: "https://github.com/razikabdul",
           color: "text-gray-800 hover:text-gray-900"
         },
         { 
           icon: Instagram, 
-          url: "https://www.instagram.com/mrr.magnus/",
+          url: "https://www.instagram.com/razik_abdul/",
+          color: "text-pink-600 hover:text-pink-700"
+        }
+      ]
+    },
+    {
+      name: "Tijani Abdul-Rahaman",
+      role: "Mobile App Developer",
+      description: "Specializes in creating cross-platform mobile applications for iOS and Android.",
+      image: "/images/tijani.jpg",
+      socialLinks: [
+        { 
+          icon: X, 
+          url: "https://x.com/tijani_abdul",
+          color: "text-foreground hover:text-muted-foreground"
+        },
+        { 
+          icon: Linkedin, 
+          url: "https://www.linkedin.com/in/tijani-abdul-rahaman/",
+          color: "text-blue-700 hover:text-blue-800"
+        },
+        { 
+          icon: Facebook, 
+          url: "https://www.facebook.com/tijani.abdulrahaman",
+          color: "text-blue-600 hover:text-blue-700"
+        },
+        { 
+          icon: Github, 
+          url: "https://github.com/tijaniabdul",
+          color: "text-gray-800 hover:text-gray-900"
+        },
+        { 
+          icon: Instagram, 
+          url: "https://www.instagram.com/tijani_abdul/",
+          color: "text-pink-600 hover:text-pink-700"
+        }
+      ]
+    },
+    {
+      name: "Magnus Opoku",
+      role: "UI/UX Designer",
+      description: "Creates intuitive and visually appealing user experiences for digital products.",
+      image: "/images/magnus.jpg",
+      socialLinks: [
+        { 
+          icon: X, 
+          url: "https://x.com/magnus_opoku",
+          color: "text-foreground hover:text-muted-foreground"
+        },
+        { 
+          icon: Linkedin, 
+          url: "https://www.linkedin.com/in/magnus-opoku/",
+          color: "text-blue-700 hover:text-blue-800"
+        },
+        { 
+          icon: Facebook, 
+          url: "https://www.facebook.com/magnus.opoku",
+          color: "text-blue-600 hover:text-blue-700"
+        },
+        { 
+          icon: Github, 
+          url: "https://github.com/magnusopoku",
+          color: "text-gray-800 hover:text-gray-900"
+        },
+        { 
+          icon: Instagram, 
+          url: "https://www.instagram.com/magnus_opoku/",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]

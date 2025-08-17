@@ -4,15 +4,15 @@ const ClientsSection = () => {
   const clients = [
     {
       name: "Vision Star Academy",
-      logo: "https://web.facebook.com/photo/?fbid=100254649567733&set=a.100161052910426&__tn__=%3C"
+      logo: "/images/visalogo.jpg"
     },
     {
-      name: "Digital Innovators",
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=100&fit=crop&crop=center"
+      name: "HakSon Realty",
+      logo: "/images/hakson.png"
     },
     {
-      name: "Ghana Business Hub",
-      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=200&h=100&fit=crop&crop=center"
+      name: "NASPA Yendi Secretariat",
+      logo: "/images/naspa.jpg"
     },
     {
       name: "West Africa Enterprises",

@@ -5,25 +5,25 @@ import { Card, CardContent } from '@/components/ui/card';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      position: "CEO, TechFlow Solutions",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
+      name: "Mohammed Awal",
+      position: "Proprietor, Vision Star Academy",
+      image: "/images/Logo.jpg",
       rating: 5,
-      testimonial: "Tuuli Service delivered an exceptional e-commerce platform that exceeded our expectations. Their attention to detail and professional approach made the entire process seamless."
+      testimonial: "Tuuli Service delivered an exceptional website that exceeded our expectations. Their attention to detail and professional approach made the entire process seamless."
     },
     {
-      name: "Michael Asante",
-      position: "Founder, Ghana Business Hub",
-      image: "https://images.unsplash.com/photo-1519390950473-47ba0277781c?w=100&h=100&fit=crop&crop=face",
+      name: "Haruna Abdul-Karim",
+      position: "Founder, HakSon Realty",
+      image: "/images/haksonceo.jpg",
       rating: 5,
-      testimonial: "The mobile app developed by Tuuli has transformed how we connect with our customers. Their technical expertise and innovative solutions are truly impressive."
+      testimonial: "The website developed by Tuuli has transformed how we connect with our customers. Their technical expertise and innovative solutions are truly impressive."
     },
     {
-      name: "Emma Thompson",
-      position: "Marketing Director, Digital Innovators",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face",
+      name: "Alhassan Ismail",
+      position: "President, NASPA Yendi Secretariat",
+      image: "/images/Ismail.jpg",
       rating: 5,
-      testimonial: "Working with Tuuli on our digital marketing campaign was a game-changer. Their SMS services and graphic design work helped us reach new heights in customer engagement."
+      testimonial: "Working with Tuuli on our digital campaign using their SMS  was a game-changer. Their SMS services and graphic design work helped us reach new heights in customer engagement."
     },
     {
       name: "David Osei",

@@ -4,7 +4,7 @@ const ClientsSection = () => {
   const clients = [
     {
       name: "Vision Star Academy",
-      logo: "/images/logo.png"
+      logo: "https://web.facebook.com/photo/?fbid=100254649567733&set=a.100161052910426&__tn__=%3C"
     },
     {
       name: "Digital Innovators",

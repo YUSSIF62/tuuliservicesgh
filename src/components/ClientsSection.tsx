@@ -1,6 +1,9 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { useEffect, useState } from 'react';
 
 const ClientsSection = () => {
+  const [api, setApi] = useState<any>(null);
+
   const clients = [
     {
       name: "Vision Star Academy",
@@ -28,6 +31,17 @@ const ClientsSection = () => {
     }
   ];
 
+  useEffect(() => {
+    if (!api) return;
+
+    // Auto-scroll the carousel
+    const interval = setInterval(() => {
+      api.scrollNext();
+    }, 3000); // Move to next slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [api]);
+
   return (
     <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
@@ -40,6 +54,7 @@ const ClientsSection = () => {
 
         <div className="relative">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
@@ -62,8 +77,6 @@ const ClientsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
         </div>
 

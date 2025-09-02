@@ -39,7 +39,7 @@ const TeamSection = () => {
     },
     {
       name: "Abdul-Rashid Issah",
-      role: "Chief Technology Officer (CTO)",
+      role: "Co-founder & CTO",
       description: "Oversees technological development and innovation within the company.",
       image: "/images/rashid.jpg",
       socialLinks: [
@@ -104,64 +104,45 @@ const TeamSection = () => {
       ]
     },
     {
-      name: "Razik Abdul-Rahaman",
+      name: "Magnus Tetteh",
       role: "Back-end Developer",
       description: "Focuses on server-side logic and database management for robust applications.",
-      image: "/images/razik.jpg",
+      image: "/images/magnus.jpg",
       socialLinks: [
         { 
-          icon: X, 
-          url: "https://x.com/razik_abdul",
-          color: "text-foreground hover:text-muted-foreground"
-        },
-        { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/razik-abdul-rahaman/",
+          url: "https://www.linkedin.com/in/magnus-tetteh-b1b208213/",
           color: "text-blue-700 hover:text-blue-800"
-        },
-        { 
-          icon: Facebook, 
-          url: "https://www.facebook.com/razik.abdulrahaman",
-          color: "text-blue-600 hover:text-blue-700"
         },
         { 
           icon: Github, 
           url: "https://github.com/razikabdul",
           color: "text-gray-800 hover:text-gray-900"
         },
-        { 
-          icon: Instagram, 
-          url: "https://www.instagram.com/razik_abdul/",
-          color: "text-pink-600 hover:text-pink-700"
-        }
       ]
     },
     {
-      name: "Tijani Abdul-Rahaman",
-      role: "Mobile App Developer",
-      description: "Specializes in creating cross-platform mobile applications for iOS and Android.",
+      name: "Abubakar Ahmad Tijani",
+      role: "Public Relations",
+      description: "Manages the company's public image and communications with stakeholders.",
       image: "/images/tijani.jpg",
       socialLinks: [
         { 
           icon: X, 
-          url: "https://x.com/tijani_abdul",
+          url: "https://x.com/AbuAhmadTijani",
           color: "text-foreground hover:text-muted-foreground"
         },
         { 
           icon: Linkedin, 
-          url: "https://www.linkedin.com/in/tijani-abdul-rahaman/",
+          url: "https://www.linkedin.com/in/ahmad-tijani-abubakari/",
           color: "text-blue-700 hover:text-blue-800"
         },
         { 
           icon: Facebook, 
-          url: "https://www.facebook.com/tijani.abdulrahaman",
+          url: "https://www.facebook.com/tijay.smart",
           color: "text-blue-600 hover:text-blue-700"
         },
-        { 
-          icon: Github, 
-          url: "https://github.com/tijaniabdul",
-          color: "text-gray-800 hover:text-gray-900"
-        },
+
         { 
           icon: Instagram, 
           url: "https://www.instagram.com/tijani_abdul/",
@@ -170,34 +151,24 @@ const TeamSection = () => {
       ]
     },
     {
-      name: "Magnus Opoku",
-      role: "UI/UX Designer",
+      name: "Abdul-Razik Abdulai",
+      role: "Designer",
       description: "Creates intuitive and visually appealing user experiences for digital products.",
-      image: "/images/magnus.jpg",
+      image: "/images/razik.jpg",
       socialLinks: [
         { 
           icon: X, 
-          url: "https://x.com/magnus_opoku",
+          url: "https://x.com/iRazikGraphix",
           color: "text-foreground hover:text-muted-foreground"
         },
         { 
-          icon: Linkedin, 
-          url: "https://www.linkedin.com/in/magnus-opoku/",
-          color: "text-blue-700 hover:text-blue-800"
-        },
-        { 
           icon: Facebook, 
-          url: "https://www.facebook.com/magnus.opoku",
+          url: "https://www.facebook.com/abdul.razik.280358",
           color: "text-blue-600 hover:text-blue-700"
         },
         { 
-          icon: Github, 
-          url: "https://github.com/magnusopoku",
-          color: "text-gray-800 hover:text-gray-900"
-        },
-        { 
           icon: Instagram, 
-          url: "https://www.instagram.com/magnus_opoku/",
+          url: "https://www.instagram.com/abdul_razik_design/#",
           color: "text-pink-600 hover:text-pink-700"
         }
       ]
